@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Property Improvement Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="loginPage" class="auth">
+  <div class="auth-box">
+    <h2>🏠 Login</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <select id="role">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button onclick="login()">Login</button>
+    <p onclick="signup()">New user? Create account</p>
+  </div>
+</section>
+
+<!-- APP -->
+<section id="app" class="hidden">
+
+<nav>
+  <h2>🏡 Property Value Booster</h2>
+  <button onclick="logout()">Logout</button>
+</nav>
+
+<header class="hero">
+  <h1>Improve Homes.<br>Increase Property Value.</h1>
+  <p>Smart home improvement ideas for Indian middle-class houses</p>
+</header>
+
+<main class="container">
+
+<section id="userPanel" class="card">
+<h2>Property Details</h2>
+
+<form id="propertyForm">
+  <select id="type" required>
+    <option value="">Property Type</option>
+    <option>Apartment</option>
+    <option>Independent House</option>
+  </select>
+
+  <input id="size" type="number" placeholder="Area (sq.ft)" required>
+
+  <select id="purpose">
+    <option>Living</option>
+    <option>Rent</option>
+    <option>Resale</option>
+  </select>
+
+  <select id="budget">
+    <option value="1">Low Budget</option>
+    <option value="2">Medium Budget</option>
+    <option value="3">High Budget</option>
+  </select>
+
+  <button>Get Recommendations</button>
+</form>
+
+<h3>🏆 Property Value Score</h3>
+<p id="score">0 / 100</p>
+
+<div id="results" class="grid"></div>
+
+<h3>⭐ Saved Ideas</h3>
+<ul id="savedList"></ul>
+</section>
+
+<section id="adminPanel" class="card hidden">
+<h2>Admin Dashboard</h2>
+<ul>
+  <li>Manage improvement ideas</li>
+  <li>Update recommendations</li>
+  <li>Review property submissions</li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<p>End Semester Project | FEDF-PS22</p>
+</footer>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
